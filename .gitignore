@@ -1,0 +1,12 @@
+_site
+.sass-cache
+
+*.diff
+*.orig
+*.rej
+*.swp
+*.swo
+*.user
+*~
+.DS_Store
+
