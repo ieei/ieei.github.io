@@ -55,6 +55,10 @@ html, body {
   align-items: flex-end;
 }
 
+.bg-dark-gray {
+  background-color: $gray-dark;
+}
+
 .section {
   padding-top: $spacing-unit;
   padding-bottom: 15px;
