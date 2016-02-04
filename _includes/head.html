@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
 
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
@@ -12,4 +12,34 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+
+    <script>
+    {% if page.navbar %}
+      function navbarAnimate() {
+        if ($(".navbar").offset().top > 128) {
+          $(".navbar-fixed-top").removeClass("navbar-{{ page.navbar }}");
+        } else {
+          $(".navbar-fixed-top").addClass("navbar-{{ page.navbar }}");
+        }
+      }
+      $(window).scroll(navbarAnimate);
+      $(document).ready(navbarAnimate);
+    {% endif %}
+
+      $(function() {
+        $('a.page-scroll').bind('click', function(event) {
+          var $offset = $($(this).attr('href')).offset();
+          if ($offset) {
+            var a = $(this);
+            $('html, body').stop().animate({
+              scrollTop: $offset.top - 50
+            }, 1500, 'easeInOutExpo', function() { a.blur() });
+          }
+          event.preventDefault();
+        });
+
+        $(".navbar-collapse ul li a").click(function(){$(".navbar-collapse").collapse('hide')});
+        $(".navbar-brand").click(function(){$(".navbar-collapse").collapse('hide')})
+      });
+    </script>
   </head>

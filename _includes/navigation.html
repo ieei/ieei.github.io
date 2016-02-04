@@ -1,19 +1,26 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-default text-uppercase navbar-fixed-top {% if page.navbar %}navbar-{{ page.navbar }}{% endif %}" role="navigation">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">{{ site.title }}</a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="/about/">About</a></li>
-      </ul>
-    </div><!--/.nav-collapse -->
+      <div class="navbar-header">
+        {% if page.id %}
+          <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}">{{ site.name }}</a>
+        {% else %}
+          <a class="navbar-brand page-scroll" href="#page-top">{{ site.name }}</a>
+        {% endif %}
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>
+      </div>
+      <div id="ieei-navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li><a class="hidden active" href="#page-top"></a></li>
+        </ul>
+        {% if page.id == None %}
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="page-scroll" href="#about">About</a></li>
+          <li><a class="page-scroll" href="#latest">Latest</a></li>
+        </ul>
+        {% endif %}
+      </div>
   </div>
 </nav>

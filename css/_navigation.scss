@@ -1,0 +1,72 @@
+
+.navbar {
+  -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+  -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+  transition: background .5s ease-in-out,padding .5s ease-in-out;
+}
+
+.navbar-brand {
+  /* I don't like this hack, but with the font on Chrome this looks better!*/
+  margin-top: -1px;
+}
+
+.navbar-default {
+  text-shadow: 0 0 2px $gray-dark;
+}
+
+.navbar-toggle {
+  line-height: 1;
+  height: 34px;
+}
+
+/* transparent-light on non small screens only */
+.navbar-transparent-light {
+
+  @media (min-width: $screen-sm-min) {
+    background: transparent;
+    border-bottom: 0;
+    color: $light-text-color;
+    padding: 20px 0px;
+    text-shadow: 0 0 5px $text-color;
+
+    a {
+      color: $light-text-color;
+    }
+
+    .navbar-nav {
+      a {
+        -webkit-transition: background .3s ease-in-out;
+        -moz-transition: background .3s ease-in-out;
+        transition: background .3s ease-in-out;
+        &:hover, &:focus {
+          background-color: rgba($light-text-color, 0.3);
+        }
+      }
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+    }
+
+    .navbar-nav > .active > a {
+      background-color: rgba($light-text-color, 0.3);
+    }
+    .navbar-nav > li > a {
+      &:hover, &:focus {
+        background-color: rgba($light-text-color, 0.3);
+      }
+    }
+
+    .navbar-brand,
+    .navbar-text,
+    .navbar-nav,
+    .navbar-nav > .active > a,
+    .navbar-nav > li > a {
+      &, &:hover, &:focus {
+        color: $light-text-color;
+      }
+    }
+
+  }
+}
+

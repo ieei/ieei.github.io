@@ -3,26 +3,34 @@
 ---
 @charset "utf-8";
 
+$spacing-unit:                            32px;
+
+/* Override stuff from bootstrap */
+$body-bg:                                 #fdfdfd;
+$line-height-base:                        1.5;
+/*$font-family-base:                        Helvetica, Arial, sans-serif;*/
+$font-size-base:                          16px;
+$text-color:                              #111;
+$light-text-color:                        #fff;
+$brand-primary:                           #2a7ae2;
+
+$navbar-default-bg:                       rgba($body-bg, 0.93);
+$navbar-default-border:                   rgba($text-color, 0.3);
+$navbar-default-color:                    $text-color;
+
+$navbar-default-link-color:               $text-color;
+$navbar-default-link-color:               $text-color;
+$navbar-default-link-hover-color:         $text-color;
+$navbar-default-link-active-color:        $text-color;
+$navbar-default-link-disabled-color:      $text-color;
+$navbar-default-link-active-bg:           darken($navbar-default-bg, 10%);
+$navbar-default-link-hover-bg:            darken($navbar-default-bg, 10%);
 
 
-// Our variables
-/*$base-font-family: Helvetica, Arial, sans-serif;*/
-/*$base-font-size:   16px;*/
-/*$small-font-size:  $base-font-size * 0.875;*/
-/*$base-line-height: 1.5;*/
 
-/*$spacing-unit:     30px;*/
 
-/*$text-color:       #111;*/
-/*$background-color: #fdfdfd;*/
-/*$brand-color:      #2a7ae2;*/
 
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
 
-/*$on-palm:          600px;*/
-/*$on-laptop:        800px;*/
 
 
 @import "bootstrap";
@@ -67,3 +75,6 @@ body {
         }
     }
 }
+
+@import "navigation";
+
