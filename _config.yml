@@ -14,6 +14,7 @@ github_username:  ieei
 
 # Build settings
 markdown: kramdown
+highlighter: pygments
 
 sass:
   sass_dir: css

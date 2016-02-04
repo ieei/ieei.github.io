@@ -55,17 +55,6 @@ html, body {
   align-items: flex-end;
 }
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-    margin-bottom: 15px;
-}
-
-@import "syntax-highlighting";
 .section {
   padding-top: $spacing-unit;
   padding-bottom: 15px;
@@ -108,4 +97,5 @@ ul, ol, dl, figure,
 
 @import "navigation";
 @import "intro";
+@import "molokai";
 
