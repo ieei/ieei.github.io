@@ -1,23 +1,68 @@
 ---
 layout: default
+navbar: transparent-light
+header: intro
 ---
 
-<div class="home">
+<section id="about" class="section container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1>About</h1>
+      <p>
+      I'm a software engineer mostly hacking on open source software written in compiled languages. (Read: C!)
+      I'm one of those people who likes fiddling with bits and bytes instead of coming up with abstractions or patterns in the form
+      of <a href="https://docs.spring.io/spring/docs/2.5.x/javadoc-api/org/springframework/aop/framework/AbstractSingletonProxyFactoryBean.html">AbstractSingletonProxyFactoryBean</a>
+      You'll most likely find me typing into my full-screen terminal. Either in iTerm2 or terminator,
+      using tmux+vim. My preferred shell is zsh using Oh My Zsh for configuration convenience.
+      </p>
+      <p>
+      I started programming in the '90s using BASIC/Visual Basic and C/C++ on MS-DOS and Windows.
+      I spent my high school years hacking on childish Visual Basic apps before going to a
+      Scandinavian university college to study C/C++, compilers, algorithms and computer science in general.
+      </p>
+      <p>
+      These days I'm first and foremost a dad for a wonderful litle boy, secondly I try to get some time to hack on
+      computer science related projects, both at work and in in my spare time. You'll find some of my stuff at
+      <a href="https://github.com/{{ site.github_username }}">github</a> obviously.
+      </p>
+    </div>
+    <div class="col-sm-12 text-center">
+      <img class="img-circle" height="240px"
+        src="{{ "/img/hs.jpg" | prepend: site.baseurl}}"
+        alt="Haakon Sporsheim">
+    </div>
+  </div>
+</section>
 
-  <h1 class="page-heading">Posts</h1>
+<section id="latest" class="section container">
+  <div class="row vertical-baseline">
+    <div class="col-xs-6">
+      <h1>Latest</h1>
+    </div>
+    <div class="col-xs-6 text-right">
+      <p><a href="{{ "/blog.html" | prepend: site.baseurl }}">View all</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-11 col-sm-offset-1">
+      {% for post in site.posts %}
+        <div class="post-list-item">
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+          <span class="post-meta">{{ post.date | date: "%Y, %b %-d" }}</span>
+          <hr>
+          <div class="post-excerpt">
+            {{ post.excerpt }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="row vertical-baseline">
+    <div class="col-sm-12">
+      <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    </div>
+  </div>
+</section>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
