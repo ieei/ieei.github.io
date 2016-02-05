@@ -1,10 +1,10 @@
 <nav class="navbar navbar-default text-uppercase navbar-fixed-top {% if page.navbar %}navbar-{{ page.navbar }}{% endif %}" role="navigation">
   <div class="container">
       <div class="navbar-header">
-        {% if page.id %}
-          <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}">{{ site.name }}</a>
-        {% else %}
+        {% if page.landing %}
           <a class="navbar-brand page-scroll" href="#page-top">{{ site.name }}</a>
+        {% else %}
+          <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}">{{ site.name }}</a>
         {% endif %}
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
@@ -14,13 +14,15 @@
       <div id="ieei-navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a class="hidden active" href="#page-top"></a></li>
-          <li><a href="{{ "/blog/" | prepend: site.baseurl }}">Blog</a></li>
-          <li><a href="{{ "/resume/" | prepend: site.baseurl }}">Resume</a></li>
+          {% for item in site.nav-pages %}
+          <li><a href="/{{ item | prepend: site.baseurl }}/">{{ item }}</a></li>
+          {% endfor %}
         </ul>
-        {% if page.id == None %}
+        {% if page.nav-sections %}
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="page-scroll" href="#about">About</a></li>
-          <li><a class="page-scroll" href="#latest">Latest</a></li>
+          {% for item in page.nav-sections %}
+          <li><a class="page-scroll" href="#{{ item }}">{{ item }}</a></li>
+          {% endfor %}
         </ul>
         {% endif %}
       </div>

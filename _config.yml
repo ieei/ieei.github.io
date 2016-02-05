@@ -12,6 +12,10 @@ url: "https://ieei.github.io" # the base hostname & protocol for your site
 twitter_username: haaspors
 github_username:  ieei
 
+nav-pages:
+  - blog
+  - resume
+
 # Build settings
 markdown: kramdown
 highlighter: pygments
