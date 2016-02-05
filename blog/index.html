@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<section id="posts" class="section container">
+  <div class="row">
+    <div class="col-sm-11 col-sm-offset-1">
+      {% for post in site.posts %}
+        <div class="post-list-item">
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+          <span class="post-meta">{{ post.date | date: "%Y, %b %-d" }}</span>
+          <hr>
+          <div class="post-excerpt">
+            {{ post.excerpt }}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
