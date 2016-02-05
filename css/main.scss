@@ -76,6 +76,14 @@ html, body {
 
 .post {
   padding-top: $spacing-unit / 2;
+
+  p {
+    margin: 16px 0px;
+  }
+
+  img {
+    max-width: 100%;
+  }
 }
 
 .rss-subscribe {

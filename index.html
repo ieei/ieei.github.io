@@ -45,7 +45,7 @@ header: intro
   </div>
   <div class="row">
     <div class="col-sm-11 col-sm-offset-1">
-      {% for post in site.posts %}
+      {% for post in site.posts limit: 4 %}
         <div class="post-list-item">
           <h2>
             <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
