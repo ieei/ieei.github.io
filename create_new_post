@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+DIR=$(dirname $0)
+
+if [ -z "$1" ]; then
+  echo "Usage: provide a title argument."
+  exit -1
+else
+  title="$@"
+fi
+
+author=$(getent passwd $(whoami) | cut -d':' -f5 | cut -d',' -f1)
+slug=$(echo $title | tr '[:upper:]' '[:lower:]' | tr '[:space:]' '-')
+slug="${slug:0:${#slug}-1}"
+post="$DIR/_posts/$(date +"%F")-$slug.md"
+
+cat > $post <<EOF
+---
+layout: post
+title: $title
+author: $author
+date: $d $(date +"%F %H:%M:00")
+categories: 
+tags: 
+---
+
+EOF
+
+[ -n $EDITOR ] && $EDITOR $post
