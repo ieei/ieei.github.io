@@ -77,6 +77,12 @@ html, body {
 .post {
   padding-top: $spacing-unit / 2;
 
+  .post-meta {
+    margin-top: 0px;
+    color: lighten($text-color, 50%);
+    font-size: $font-size-small;
+  }
+
   p {
     margin: 16px 0px;
   }
