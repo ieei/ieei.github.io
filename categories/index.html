@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<section id="posts" class="section container">
+  <div class="row">
+    <div class="col-sm-11 col-sm-offset-1">
+      {% for cat in site.categories %}
+        <div class="blog-collection-list">
+          <h3 id="{{ cat | first }}" class="post-category">{{ cat | first }}</h3>
+          <ul>
+            {% for post in site.categories[cat.first] %}
+            <li><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
