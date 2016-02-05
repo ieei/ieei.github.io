@@ -4,18 +4,13 @@ layout: default
 
 <section id="posts" class="section container">
   <div class="row">
-    <div class="col-sm-11 col-sm-offset-1">
+    <div class="col-sm-12 col-md-8">
       {% for post in site.posts %}
-        <div class="post-list-item">
-          <h2>
-            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-          </h2>
-          <span class="post-meta">{{ post.date | date: "%Y, %b %-d" }}</span>
-          <hr>
-          <div class="post-excerpt">
-            {{ post.excerpt }}
-          </div>
-        </div>
+        {% if forloop.index0 < 2 %}
+          {% include post_item.html full=true %}
+        {% else %}
+          {% include post_item.html %}
+        {% endif %}
       {% endfor %}
     </div>
   </div>

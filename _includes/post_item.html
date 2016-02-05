@@ -1,0 +1,19 @@
+        <div class="post-list-item">
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+          <p class="post-meta">{{ post.date | date: "%Y, %b %-d" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %}</p>
+          {% if include.full %}
+          <div class="post-content">
+            {{ post.content }}
+          </div>
+          {% else %}
+          <div class="post-excerpt">
+            {{ post.excerpt }}
+            <div class="text-right">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Continue reading</a>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+
