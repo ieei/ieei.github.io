@@ -1,9 +1,16 @@
 ---
 layout: resume
+navbar: transparent
+header: img
+header-img: /img/rack.jpg
 title: Resume
+nav-sections:
+  - me
+  - education
+  - work
 ---
 
-###Personalia
+###Personalia### {#me}
 <div style="margin-left: 24px;">
   Name: <strong>Haakon Sporsheim</strong><br/>
   Address: <strong>Nordveien 3E, 1358 Jar, Norway</strong><br/>
@@ -47,7 +54,7 @@ title: Resume
 * [Gjøvik University College][hig] (2001-2004)
   * Bachelor in computer science: programming
 
-###Work experience
+###Work experience### {#work}
 * [Telenor Digital][td] (2015-present)
   * R&D Software Engineer
     * Exploratory engineering in the CTO office with focus on WebRTC and related technologies.

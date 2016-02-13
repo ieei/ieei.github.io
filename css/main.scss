@@ -59,6 +59,27 @@ html, body {
   background-color: $gray-dark;
 }
 
+.header-img {
+  @extend .section-img-overlay;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 100px 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.header-body {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .section {
   padding-top: $spacing-unit;
   padding-bottom: 15px;

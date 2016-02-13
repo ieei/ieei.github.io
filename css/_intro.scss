@@ -1,16 +1,8 @@
 
 .intro {
-    @extend .section-img-overlay;
-    display: table;
-    width: 100%;
-    height: auto;
-    padding: 100px 0;
+    @extend .header-img;
     color: $light-text-color;
-    background: transparent url("/img/cseng.jpg") no-repeat center bottom scroll;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    background-image: url("/img/cseng.jpg");
     .intro-body {
         display: table-cell;
         vertical-align: middle;
