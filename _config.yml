@@ -28,3 +28,11 @@ sass:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
