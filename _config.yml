@@ -19,7 +19,7 @@ nav-pages:
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 sass:
   sass_dir: css
