@@ -27,5 +27,5 @@ Eurosport, Discovery or whoever you contracted; what's wrong with you people?
 As far as I understand, Tv2 bought the rights to English Premier League for the next three seasons, with Discovery Networks Norway as a close contender.
 Maybe that's a good thing afterall!?
 
-[eurosportplayer.no]: eurosportplayer.no
+[eurosportplayer.no]: //eurosportplayer.no
 [screenshot]: {{ "/img/Screen_Shot_2015-10-03_at_12_24_06.png" | prepend: site.baseurl }}

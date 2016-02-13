@@ -101,10 +101,10 @@ nav-sections:
       * Windows UI, native win32
 
 
-[uio]: www.uio.no
-[hig]: www.hig.no
-[td]: www.telenordigital.com
-[pexip]: www.pexip.com
-[cisco]: www.cisco.com
-[detec]: www.detec.no
+[uio]: //www.uio.no
+[hig]: //www.hig.no
+[td]: //www.telenordigital.com
+[pexip]: //www.pexip.com
+[cisco]: //www.cisco.com
+[detec]: //www.detec.no
 
