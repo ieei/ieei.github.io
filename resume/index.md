@@ -10,7 +10,7 @@ nav-sections:
   - work
 ---
 
-###Personalia### {#me}
+### Personalia {#me}
 <div style="margin-left: 24px;">
   Name: <strong>Haakon Sporsheim</strong><br/>
   Address: <strong>Nordveien 3E, 1358 Jar, Norway</strong><br/>
@@ -20,7 +20,7 @@ nav-sections:
   Date of birth: <strong>January 13th 1982 (Oslo)</strong><br/>
 </div>
 
-###Skills
+### Skills
 <div style="margin-left: 24px;">
   Core languages: <strong>C</strong><br/>
   Additional languages: <strong>Python, C++ and some Objective-C</strong><br/>
@@ -29,7 +29,7 @@ nav-sections:
   [D]VCS: <strong>Git, Bzr, Mercurial, Subversion</strong><br/>
 </div>
 
-###Awards
+### Awards
 <div style="margin-left: 24px; margin-bottom: 32px;">
   Rosing Student award: <strong>Winner</strong>
 
@@ -48,13 +48,13 @@ nav-sections:
   </div>
 </div>
 
-###Education
+### Education
 * [University of Oslo][uio] (2004, 2011-present)
   * Master of Science in Informatics: programming and networks
 * [Gjøvik University College][hig] (2001-2004)
   * Bachelor in computer science: programming
 
-###Work experience### {#work}
+### Work experience {#work}
 * [Telenor Digital][td] (2015-present)
   * R&D Software Engineer
     * Exploratory engineering in the CTO office with focus on WebRTC and related technologies.
