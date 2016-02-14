@@ -12,6 +12,7 @@ url: "https://ieei.github.io" # the base hostname & protocol for your site
 twitter_username: haaspors
 github_username:  ieei
 disqus_shortname: ieeigh
+google_analytics_tracking_id: UA-73773916-1
 
 nav-pages:
   - blog
