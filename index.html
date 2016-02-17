@@ -37,7 +37,32 @@ nav-sections:
     <div class="col-sm-10 col-sm-offset-1 col-md-8 text-center">
       <img class="img-circle" height="240px"
         src="{{ "/img/hs.jpg" | prepend: site.baseurl}}"
-        alt="Haakon Sporsheim">
+        alt="Haakon Sporsheim"></br></br>
+      <ul class="social social-horiz social-light">
+        {% if site.github_username %}
+        <li>
+          <a class="gh" href="https://github.com/{{ site.github_username }}">
+            <i class="fa fa-github"></i>
+          </a>
+        </li>
+        {% endif %}
+
+        {% if site.twitter_username %}
+        <li>
+          <a class="tw" href="https://twitter.com/{{ site.twitter_username }}">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        {% endif %}
+
+        {% if site.linkedin_username %}
+        <li>
+          <a class="ln" href="https://linkedin.com/in/{{ site.linkedin_username }}">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </li>
+        {% endif %}
+      </ul>
     </div>
   </div>
 </section>

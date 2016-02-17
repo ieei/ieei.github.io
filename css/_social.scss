@@ -1,10 +1,14 @@
 .social {
   list-style: none;
   margin-left: 0;
+  padding: 0;
+}
+
+.social-horiz li {
+  display: inline;
 }
 
 .social li a {
-  display: block;
   background: transparent;
   color: $light-text-color;
   text-decoration: none;
@@ -21,25 +25,32 @@
   font-size: 18px;
 }
 
-.social a:hover .fa-envelope {
+.social a:hover .fa-envelope,
+.social-light .fa-envelope {
   background: #777777;
 }
-.social a:hover .fa-feed {
+.social a:hover .fa-feed,
+.social-light .fa-feed {
   background: #ff6600;
 }
-.social a:hover .fa-github {
+.social a:hover .fa-github,
+.social-light .fa-github {
   background: #767676;
 }
-.social a:hover .fa-twitter {
+.social a:hover .fa-twitter,
+.social-light .fa-twitter {
   background: #55acee;
 }
-.social a:hover .fa-linkedin {
+.social a:hover .fa-linkedin,
+.social-light .fa-linkedin {
   background: #007bb5;
 }
-.social a:hover .fa-facebook {
+.social a:hover .fa-facebook,
+.social-light .fa-facebook {
   background: #3b5998;
 }
-.social a:hover .fa-google-plus {
+.social a:hover .fa-google-plus,
+.social-light .fa-google-plus {
   background: #dd4b39;
 }
 
