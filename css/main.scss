@@ -99,6 +99,10 @@ html, body {
   padding-top: $spacing-unit / 2;
 }
 
+.post-list-item {
+  padding: 16px 0;
+}
+
 .post-meta {
   margin-top: 0px;
   color: lighten($text-color, 50%);
@@ -115,12 +119,9 @@ html, body {
   }
 }
 
-.rss-subscribe {
-  margin-top: 15px;
-}
-
 @import "navigation";
 @import "social";
+@import "tags";
 @import "intro";
 @import "molokai";
 
