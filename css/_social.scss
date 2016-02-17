@@ -8,15 +8,12 @@
   display: inline;
 }
 
-.social li a {
-  background: transparent;
-  color: $light-text-color;
-  text-decoration: none;
+.social-round li a {
   line-height: 30px;
   font-size: 14px;
 }
 
-.social a i {
+.social-round a i {
   text-align: center;
   margin: 0px 5px;
   border-radius: 15px;
@@ -25,32 +22,67 @@
   font-size: 18px;
 }
 
-.social a:hover .fa-envelope,
-.social-light .fa-envelope {
+.social-bghover a,
+.social-bgclr a {
+  background: transparent;
+  color: $light-text-color;
+  text-decoration: none;
+}
+
+.social-bghover a:hover .fa-envelope,
+.social-bgclr .fa-envelope {
   background: #777777;
 }
-.social a:hover .fa-feed,
-.social-light .fa-feed {
+.social-bghover a:hover .fa-feed,
+.social-bgclr .fa-feed {
   background: #ff6600;
 }
-.social a:hover .fa-github,
-.social-light .fa-github {
+.social-bghover a:hover .fa-github,
+.social-bgclr .fa-github {
   background: #767676;
 }
-.social a:hover .fa-twitter,
-.social-light .fa-twitter {
+.social-bghover a:hover .fa-twitter,
+.social-bgclr .fa-twitter {
   background: #55acee;
 }
-.social a:hover .fa-linkedin,
-.social-light .fa-linkedin {
+.social-bghover a:hover .fa-linkedin,
+.social-bgclr .fa-linkedin {
   background: #007bb5;
 }
-.social a:hover .fa-facebook,
-.social-light .fa-facebook {
+.social-bghover a:hover .fa-facebook,
+.social-bgclr .fa-facebook {
   background: #3b5998;
 }
-.social a:hover .fa-google-plus,
-.social-light .fa-google-plus {
+.social-bghover a:hover .fa-google-plus,
+.social-bgclr .fa-google-plus {
   background: #dd4b39;
 }
 
+.social-brand-clr a .fa-facebook,
+.social-brand-clr a .fa-facebook-square {
+  color: #3b5998;
+}
+.social-brand-clr a .fa-twitter,
+.social-brand-clr a .fa-twitter-square {
+  color: #55acee;
+}
+.social-brand-clr a .fa-google-plus,
+.social-brand-clr a .fa-google-plus-square {
+  color: #dd4b39;
+}
+.social-brand-clr a .fa-linkedin-plus,
+.social-brand-clr a .fa-linkedin-square {
+  color: #007bb5;
+}
+.social-brand-clr a .fa-pinterest,
+.social-brand-clr a .fa-pinterest-square {
+  color: #cb2027;
+}
+.social-brand-clr a .fa-reddit,
+.social-brand-clr a .fa-reddit-square {
+  color: #ff4500;
+}
+.social-brand-clr a .fa-envelope,
+.social-brand-clr a .fa-envelope-square {
+  color: #777777;
+}

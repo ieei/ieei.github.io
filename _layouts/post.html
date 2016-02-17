@@ -27,6 +27,20 @@ comments: true
           <li><a class="tag" href="{{ "/tags/#" | prepend: site.baseurl }}{{ tag }}">{{ tag }}</a></li>
         {% endfor %}
         </ul>
+        <div class="text-center">
+          <!--<ul class="social social-horiz social-light">-->
+          {% assign urlescaped = page.url | prepend: site.baseurl | prepend: site.url | cgi_escape %}
+          {% assign titleescaped = page.title | cgi_escape %}
+          <ul class="social social-horiz social-brand-clr">
+            <li><a href="https://www.facebook.com/sharer/sharer.php?u={{ urlescaped }}&t={{ titleescaped }}" target="_blank" title="Share on Facebook"><i class="fa fa-facebook-square fa-2x"></i></a></li>
+            <li><a href="https://twitter.com/intent/tweet?source={{ urlescaped }}&text={{ titleescaped }}: {{ urlescaped }}&via=haaspors" target="_blank" title="Tweet"><i class="fa fa-twitter-square fa-2x"></i></a></li>
+            <li><a href="https://plus.google.com/share?url={{ urlescaped }}" target="_blank" title="Share on Google+"><i class="fa fa-google-plus-square fa-2x"></i></a></li>
+            <li><a href="http://pinterest.com/pin/create/button/?url={{ urlescaped }}&description=" target="_blank" title="Pin it"><i class="fa fa-pinterest-square fa-2x"></i></a></li>
+            <li><a href="http://www.reddit.com/submit?url={{ urlescaped }}&title={{ titleescaped }}" target="_blank" title="Submit to Reddit"><i class="fa fa-reddit-square fa-2x"></i></a></li>
+            <li><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ urlescaped }}&title={{ titleescaped }}&summary=&source={{ urlescaped }}" target="_blank" title="Share on LinkedIn"><i class="fa fa-linkedin-square fa-2x"></i></a></li>
+            <li><a href="mailto:?subject={{ titleescaped }}&body=: {{ urlescaped }}" target="_blank" title="Email"><i class="fa fa-envelope-square fa-2x"></i></a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
