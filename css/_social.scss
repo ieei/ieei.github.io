@@ -1,0 +1,45 @@
+.social {
+  list-style: none;
+  margin-left: 0;
+}
+
+.social li a {
+  display: block;
+  background: transparent;
+  color: $light-text-color;
+  text-decoration: none;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.social a i {
+  text-align: center;
+  margin: 0px 5px;
+  border-radius: 15px;
+  width: 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.social a:hover .fa-envelope {
+  background: #777777;
+}
+.social a:hover .fa-feed {
+  background: #ff6600;
+}
+.social a:hover .fa-github {
+  background: #767676;
+}
+.social a:hover .fa-twitter {
+  background: #55acee;
+}
+.social a:hover .fa-linkedin {
+  background: #007bb5;
+}
+.social a:hover .fa-facebook {
+  background: #3b5998;
+}
+.social a:hover .fa-google-plus {
+  background: #dd4b39;
+}
+

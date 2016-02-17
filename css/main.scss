@@ -119,24 +119,8 @@ html, body {
   margin-top: 15px;
 }
 
-.contact-list,
-.social-media-list {
-  list-style: none;
-  margin-left: 0;
-}
-
-.icon > svg {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-
-  path {
-    fill: $gray-light;
-  }
-}
-
 @import "navigation";
+@import "social";
 @import "intro";
 @import "molokai";
 
