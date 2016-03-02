@@ -4,7 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ "/blog/atom.xml" | prepend: site.baseurl }}" />
@@ -60,20 +59,29 @@
     <meta name="twitter:creator" content="@{{ site.twitter_username }}">
     <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     {% if page.title %}
+      <meta name="og:title" content="{{ page.title }}">
       <meta name="twitter:title" content="{{ page.title }}">
     {% else %}
+      <meta name="og:title" content="{{ site.name }} - {{ site.title }}">
       <meta name="twitter:title" content="{{ site.name }} - {{ site.title }}">
     {% endif %}
     {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+      <meta name="og:description" content="{{ page.description }}">
       <meta name="twitter:description" content="{{ page.description }}">
     {% else %}
       {% if page.excerpt  %}
+        <meta name="description" content="{{ page.excerpt | strip_html }}">
+        <meta name="og:description" content="{{ page.excerpt | strip_html }}">
         <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
       {% else %}
+        <meta name="description" content="{{ site.description }}">
+        <meta name="og:description" content="{{ site.description }}">
         <meta name="twitter:description" content="{{ site.description }}">
       {% endif %}
     {% endif %}
     {% if page.image %}
+    <meta name="og:image" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}">
     <meta name="twitter:image:src" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}">
     {% endif %}
   </head>
