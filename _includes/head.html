@@ -54,4 +54,26 @@
       ga('create', '{{ site.google_analytics_tracking_id }}', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+    <meta name="twitter:creator" content="@{{ site.twitter_username }}">
+    <meta name="twitter:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    {% if page.title %}
+      <meta name="twitter:title" content="{{ page.title }}">
+    {% else %}
+      <meta name="twitter:title" content="{{ site.name }} - {{ site.title }}">
+    {% endif %}
+    {% if page.description %}
+      <meta name="twitter:description" content="{{ page.description }}">
+    {% else %}
+      {% if page.excerpt  %}
+        <meta name="twitter:description" content="{{ page.excerpt | strip_html }}">
+      {% else %}
+        <meta name="twitter:description" content="{{ site.description }}">
+      {% endif %}
+    {% endif %}
+    {% if page.image %}
+    <meta name="twitter:image:src" content="{{ page.image | prepend: site.baseurl | prepend: site.url }}">
+    {% endif %}
   </head>
