@@ -120,6 +120,14 @@ html, body {
     @extend .table-condensed;
   }
 
+  blockquote {
+    font-size: inherit;
+
+    p {
+      margin: 0;
+    }
+  }
+
   img {
     max-width: 100%;
   }
