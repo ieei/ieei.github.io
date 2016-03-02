@@ -114,6 +114,12 @@ html, body {
     margin: 16px 0px;
   }
 
+  table {
+    @extend .table;
+    @extend .table-striped;
+    @extend .table-condensed;
+  }
+
   img {
     max-width: 100%;
   }
