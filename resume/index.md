@@ -4,6 +4,7 @@ navbar: transparent
 header: img
 header-img: /img/rack.jpg
 title: Resume
+image: /img/hs.jpg
 nav-sections:
   - me
   - education
