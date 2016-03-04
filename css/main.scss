@@ -133,6 +133,14 @@ html, body {
   }
 }
 
+.highlight pre {
+    word-wrap: normal;
+}
+
+.highlight pre code {
+    white-space: pre;
+}
+
 @import "navigation";
 @import "social";
 @import "tags";
