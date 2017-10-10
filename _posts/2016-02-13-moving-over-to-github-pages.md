@@ -39,10 +39,10 @@ Locally I serve it running `bundle exec jekyll serve` as you would find in the
 github pages documentation.
 
 I strongly recommend my setup, it's pretty easy, and I especially like the new way of posting!
-[github.com/ieei/ieei.github.io][source]
+[github.com/haaspors/haaspors.github.io][source]
 
 [ghpages]: //pages.github.com
 [jekyll]: //www.jekyllrb.com
 [disqus]: //www.disqus.com
 [bootstrap]: //getbootstrap.com
-[source]: //github.com/ieei/ieei.github.io
+[source]: //github.com/haaspors/haaspors.github.io

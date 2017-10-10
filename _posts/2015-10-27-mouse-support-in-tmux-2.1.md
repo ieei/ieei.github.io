@@ -26,4 +26,4 @@ Short and sweet! :)
 My [dotfiles github repo][dotfiles] is already updated!
 
 [tmux changes]: https://raw.githubusercontent.com/tmux/tmux/master/CHANGES
-[dotfiles]: https://github.com/ieei/dotfiles/commit/f0a569115c5dbc734ff40b28dbd96d826024cf41
+[dotfiles]: https://github.com/haaspors/dotfiles/commit/f0a569115c5dbc734ff40b28dbd96d826024cf41
